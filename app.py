@@ -2,9 +2,13 @@ from keras.api.models import load_model
 import streamlit as st
 from keras.api.preprocessing.image import load_img,img_to_array
 import numpy as np
+import gdown
 
 # Load the trained model
-model = load_model('plant_disease_model.h5')
+gdown.download("https://drive.google.com/file/d/15IDZkEz12_AIjz6U6IMZ20LOCpRNwCKA/view?usp=sharing", output, quiet=False)
+
+# Load the model
+model = tf.keras.models.load_model(output)
 class_names = ['Pepper__bell___Bacterial_spot', 'Pepper__bell___healthy', 'Potato___Early_blight', 'Potato___Late_blight', 'Potato___healthy', 'Tomato_Bacterial_spot', 'Tomato_Early_blight', 'Tomato_Late_blight', 'Tomato_Leaf_Mold', 'Tomato_Septoria_leaf_spot', 'Tomato_Spider_mites_Two_spotted_spider_mite', 'Tomato__Target_Spot', 'Tomato__Tomato_YellowLeaf__Curl_Virus', 'Tomato__Tomato_mosaic_virus', 'Tomato_healthy']
 
 # Streamlit interface
