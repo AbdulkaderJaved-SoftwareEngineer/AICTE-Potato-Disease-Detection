@@ -6,6 +6,8 @@ import gdown
 import tensorflow
 # Load the trained model
 
+output = 'plant_disease_model.h5'
+
 gdown.download("https://drive.google.com/file/d/15IDZkEz12_AIjz6U6IMZ20LOCpRNwCKA/view?usp=sharing", output, quiet=False)
 
 # Load the model
