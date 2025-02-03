@@ -3,7 +3,7 @@ import streamlit as st
 from keras.api.preprocessing.image import load_img,img_to_array
 import numpy as np
 import gdown
-import tensorflow
+import tensorflow as tf
 # Load the trained model
 
 output = 'plant_disease_model.h5'
