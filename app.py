@@ -7,8 +7,8 @@ import tensorflow as tf
 # Load the trained model
 
 output = 'plant_disease_model.h5'
-
-gdown.download("https://drive.google.com/file/d/15IDZkEz12_AIjz6U6IMZ20LOCpRNwCKA/view?usp=sharing", output, quiet=False)
+file_id = '15IDZkEz12_AIjz6U6IMZ20LOCpRNwCKA'
+gdown.download(f"https://drive.google.com/uc?id={file_id}", output, quiet=False)
 
 # Load the model
 model = tf.keras.models.load_model(output)
